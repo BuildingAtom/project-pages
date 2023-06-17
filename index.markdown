@@ -6,7 +6,12 @@ date:   2023-06-16 03:03:01 -0400
 description: >- # Supports markdown
   This is the main project page and the page used to demonstrate how this works with all of the options for the Front Matter present
 show-description: true
+
+# Add mathjax functionality
 mathjax: true
+# Automatically add permalinks to all headings
+# https://github.com/allejo/jekyll-anchor-headings
+autoanchor: true
 
 # Preview image for social media cards
 image:
@@ -73,9 +78,11 @@ Let's try flipping the order.
 There is quite a bit of flexibility to how you structure the text too.
 Here, I'm going to make a justified grey content block with the heading outside.
 
-# Content
+# [Content](#content)
 <div markdown="1" class="content-block grey justify no-pre">
 some text
+
+Try clicking this heading, this shows the manually defined header anchor, but if you do this, you should do it for all headings.
 </div>
 
 I made this look right by adding the `no-pre` class.

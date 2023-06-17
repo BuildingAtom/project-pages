@@ -1,4 +1,4 @@
-<div class="external-links" aria-label="Links">
+<div class="external-links">
   <div class="box">
   {%- for link in page.links %}
     <div class="single">

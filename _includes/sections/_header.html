@@ -2,7 +2,7 @@
   <div class="wrapper">
     <a class="page-title" rel="bookmark" href="{{ page.url | absolute_url }}">{{ page.title | escape }}</a>
     {%- if page.show-description %}
-      <div class="page-description">{{ page.description | markdownify }}</p>
+      <div class="page-description">{{ page.description | markdownify }}</div>
     {%- endif %}
   </div>
 </header>

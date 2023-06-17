@@ -1,4 +1,4 @@
-<div class="authors" aria-label="Authors">
+<div class="authors">
   <div class="box">
   {%- for author in page.authors %}
     <div class="single">

@@ -1,6 +1,6 @@
 {%- case include.icon-library -%}
 {%- when "simpleicons" -%}
-<i class="si-wrapper" style="background-image: url(https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/{{ include.icon | escape }}.svg)"></i>
+<i class="si-wrapper" style="background-image: url(https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/{{ include.icon | escape }}.svg)"></i>
 {%- when "bootstrap-icons" -%}
 <i class="bi {{include.icon}}"></i>
 {%- when "css.gg" -%}
