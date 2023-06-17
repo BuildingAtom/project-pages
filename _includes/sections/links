@@ -5,10 +5,10 @@
       <div class="icon">
       {%- include util/icons icon=link.icon icon-library=link.icon-library -%}
       </div>
-      {%- if link.text or link.text != blank -%}
+      {%- if link.text != blank and link.text -%}
         <p>{{ link.text }}</p>
       {%- endif -%}
-      {%- if link.url or link.url != blank -%}
+      {%- if link.url != blank and link.url -%}
         <a href="{{ link.url }}"></a>
       {%- endif -%}
     </div>

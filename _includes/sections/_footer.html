@@ -1,4 +1,4 @@
-{%- if site.footer or site.footer != blank or site.show-credit -%}
+{%- if site.show-credit or site.footer and site.footer != blank -%}
 <footer class="site-footer">
   <div class="wrapper">
     {%- if site.show-credit -%}

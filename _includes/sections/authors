@@ -3,7 +3,7 @@
   {%- for author in page.authors %}
     <div class="single">
       <p class="name">
-        {%- if author.url or author.url != blank -%}
+        {%- if author.url != blank and author.url -%}
         <a href="{{ author.url }}">{{ author.name }}</a>
         {%- else -%}
         {{ author.name }}
@@ -12,9 +12,9 @@
         <sup>{{ author.footnotes }}</sup>
         {%- endif -%}
       </p>
-      {%- if author.mailto or author.mailto != blank %}
+      {%- if author.mailto != blank and author.mailto %}
         <a class="email" href="mailto:{{ author.mailto }}">{{ author.email | default: author.mailto}}</a>
-      {%- elsif author.email or author.email != blank %}
+      {%- elsif author.email != blank and author.email %}
         <p class="email">{{ author.email }}</p>
       {%- endif %}
     </div>

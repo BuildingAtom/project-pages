@@ -1,15 +1,15 @@
 {%- assign rel = include.sites -%}
-{%- if rel and rel.sites.size > 0 -%}
+{%- if rel.sites.size > 0 and rel-%}
   <div class="related">
     <ul class="related-sites">
     {%- for loc in rel.sites -%}
       <li>
         <a href="{{ loc.href }}">
-          {%- if loc.icon or loc.icon != blank -%}
+          {%- if loc.icon != blank and loc.icon -%}
             {%- include util/icons icon=loc.icon icon-library=loc.icon-library -%}
             <span style="opacity: 0;">&nbsp;</span>
           {%- endif -%}
-          {%- if loc.text or loc.text != blank -%}
+          {%- if loc.text != blank and loc.text -%}
             {{ loc.text | escape }}
           {%- endif -%}
         </a>
