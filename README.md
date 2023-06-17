@@ -9,6 +9,10 @@ Besides, it makes it more difficult to get running as a project page anyway!
 All you should do is download the archive for one of the example branches (where you're reading this from right now!) and upload these files.
 These examples are close to the minimal files needed.
 
+If you are planning to use this to make an organization specific template, then forking is reasonable.
+Just make sure to change the `remote_theme` key inside of `_config.yml` to match your organization's setup.
+More information on that can be found at the [jekyll-remote-theme repo](https://github.com/benbalter/jekyll-remote-theme).
+
 ## Create an orphan branch and ensure that it is clean
 
 You'll want to keep your website code separate from the history of your actual project.
@@ -93,6 +97,8 @@ Each of these should be self-explanatory, but change these to change the appeara
 
 **Note**: In addition to `css/stylesheet.scss`, you can make your own `css/overrides.css` or `css/overrides.scss` file.
 If it exists, this file is imported after `css/stylesheeet.scss` and can be used to override some of the style I have written.
+
+If you wish to add plugins, check [GitHub Pages Dependency Versions](https://pages.github.com/versions/) to make sure your desired plugin is supported!
 
 ---
 

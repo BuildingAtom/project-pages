@@ -79,6 +79,7 @@ Here is a flow diagram illustrating out method.
 RGB-D images are semantically segmented using an off-the-shelf semantic segmentation network.
 Using the camera’s estimated pose and associated depth image, the pixel-wise probabilistic terrain class estimates are projected into the map.
 The height map is updated using a 1D Kalman filter and the terrain class estimates, alongside our novel material property dataset, are used to recursively estimate terrain properties for each region of the map.
+{: class="justify"}
 
 ![A flow diagram of our method showing how color and depth images are integrated with a semantic segmentation network and material property database to perform bayesian interencing on a 2.5D elevation map.](https://roahmlab.github.io/sel_map/web_elements/flow_diagram.png "Flow Diagram of Method")
 
@@ -87,6 +88,7 @@ The height map is updated using a 1D Kalman filter and the terrain class estimat
 We ran our method on the Spot quadruped using an on-board Realsense D435 RGB-D camera.
 Experiments were conducted both indoors and outdoors with a variety of terrain classes.
 We compared our method to a state-of-the-art traversability mapping framework to demonstrate the utility of our semantic mapping algorithm when compared to a traversability estimation algorithm.
+{: class="justify"}
 
 ![Generated heightmaps and friction data for a variety of scenarios using our method.](https://roahmlab.github.io/sel_map/web_elements/comparison_full.PNG "Results Figure")
 
@@ -94,6 +96,7 @@ Each column depicts the performance of our proposed mapping algorithm (second ro
 Traversability estimation sometimes believes that a region is traversable when it is not, such as an icy surface (column a) or a puddle (column e).
 In other scenarios, it believes that an area is intraversable when it is traversable such as on hills (column b, d) and near low vegetation (column c).
 Our method makes no claims about traversability, instead it estimates the probability distribution of terrain properties for each mesh element along with the terrain geometry.
+{: class="justify"}
 
 <div markdown="1" class="content-block grey justify">
 # Citation

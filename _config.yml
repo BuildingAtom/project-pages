@@ -9,7 +9,7 @@ plugins:
   # Make sure GitHub supports them here: https://pages.github.com/versions/
 
 # Don't change! (or do change if you really want ig)
-remote_theme: BuildingAtom/project-pages@v1.1
+remote_theme: BuildingAtom/project-pages@v1.2-theme
 
 # Metadata and SEO-helper stuff
 # This title here should correspond to your base site or as a shared title
@@ -18,6 +18,7 @@ baseurl: "/project-pages" # the subpath of your site, e.g. /blog
 url: "https://buildingatom.io" # the base hostname & protocol for your site, e.g. http://example.com
 # This sets window title, not the title you read on the page
 title-format: page-site # options are page-site, page, site.
+lang: en
 
 # Shenanigans from the template default because that's actually not a thing.
 credit:
@@ -31,12 +32,17 @@ show-credit: true
 
 # Disable the footer by just setting the above false AND making the below blank
 footer:
+  connections-pre: # This prefixes the connections section at the botom.
   connections-post: Socials
   connections:
     twitter: https://www.twitter.com/BuildingAtom
     github:  https://github.com/BuildingAtom
   related-sites:
     sites:
+      - text: Base Example
+        href: /project-pages/
+        icon: bi-box-arrow-left
+        icon-library: bootstrap-icons
       - text: SEL Map Example
         href: /project-pages/sel_map
         icon: bi-map

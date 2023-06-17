@@ -6,7 +6,12 @@ date:   2023-06-16 03:03:01 -0400
 description: >- # Supports markdown
   This is the main project page and the page used to demonstrate how this works with all of the options for the Front Matter present
 show-description: true
+
+# Add page-specifi mathjax functionality. Manage global setting in _config.yml
 mathjax: true
+# Automatically add permalinks to all headings
+# https://github.com/allejo/jekyll-anchor-headings
+autoanchor: true
 
 # Preview image for social media cards
 image:
@@ -45,6 +50,14 @@ links:
     icon-library: simpleicons
     text: Arxiv HP
     url: https://arxiv.org/
+  - icon: bi-map
+    icon-library: bootstrap-icons
+    text: SEL_Map Ex.
+    url: /project-pages/sel_map
+  - icon: bi-bezier2
+    icon-library: bootstrap-icons
+    text: ARMOUR Ex.
+    url: /project-pages/armour-dev
   - icon: github
     icon-library: simpleicons
     text: Code
@@ -73,17 +86,19 @@ Let's try flipping the order.
 There is quite a bit of flexibility to how you structure the text too.
 Here, I'm going to make a justified grey content block with the heading outside.
 
-# Content
+# [Content](#content)
 <div markdown="1" class="content-block grey justify no-pre">
 some text
+
+Try clicking this heading, this shows the manually defined header anchor, but if you do this, you should do it for all headings.
 </div>
 
 I made this look right by adding the `no-pre` class.
 If you don't include `markdown="1"` it will fail to render any markdown inside.
 
-You can also make fullwidth embeds
+You can also make fullwidth embeds (this doesn't actually link to any video)
 <div class="fullwidth">
-<video controls="" width="100%" style="background-color:black;"></video>
+<video controls="" style="background-color:black;width:100%;height:auto;aspect-ratio:16/9;"></video>
 </div>
 
 <div markdown="1" class="content-block grey justify">
@@ -158,10 +173,16 @@ $$
 \end{align*}
 $$
 
-
 You can also treat a section of text as a block, and use kramdown's block attribution methods to change fonts.
 You can see at the end of this section in the markdown that I do just that
 {: class="cabin"}
+
+<div markdown="1" class="content-block grey justify">
+# This is a really long heading block so I can see if justify breaks the heading, and make sure that headings don't get justify unless they are explicitly classed with justify like the following heading
+
+# This is the following really long heading block so I can see if justify breaks the heading, and make sure that only this heading is justified because it has the explicit tag
+{: class="justify"}
+</div>
 
 <div markdown="1" class="content-block grey justify">
 # Citation
