@@ -7,7 +7,7 @@ description: >- # Supports markdown
   This is the main project page and the page used to demonstrate how this works with all of the options for the Front Matter present
 show-description: true
 
-# Add mathjax functionality
+# Add page-specifi mathjax functionality. Manage global setting in _config.yml
 mathjax: true
 # Automatically add permalinks to all headings
 # https://github.com/allejo/jekyll-anchor-headings
@@ -15,10 +15,10 @@ autoanchor: true
 
 # Preview image for social media cards
 image:
-  path: /assets/img/twitter.png
+  path: https://cdn.pixabay.com/photo/2019/09/05/01/11/mountainous-landscape-4452844_1280.jpg
   height: 100
-  width: 100
-  alt: Twitter Logo
+  width: 256
+  alt: Random Landscape
 
 # Only the first author is supported by twitter metadata
 authors:
@@ -88,9 +88,9 @@ Try clicking this heading, this shows the manually defined header anchor, but if
 I made this look right by adding the `no-pre` class.
 If you don't include `markdown="1"` it will fail to render any markdown inside.
 
-You can also make fullwidth embeds
+You can also make fullwidth embeds (this doesn't actually link to any video)
 <div class="fullwidth">
-<video controls="" width="100%" style="background-color:black;"></video>
+<video controls="" style="background-color:black;width:100%;height:auto;aspect-ratio:16/9;"></video>
 </div>
 
 <div markdown="1" class="content-block grey justify">
@@ -144,9 +144,9 @@ If you include the - at the start of end of such a line, it say to discard all w
 In order to keep the comma there, we added the -.
 This is what happens:
 {% include util/icons icon='github' icon-library='simpleicons' %}
-, when you don't have it.
+, when you don't have it (notice the space).
 
-And if you have mathjax enabled in `_config.yml`, you can even add latex:
+And if you have mathjax enabled in `_config.yml` or in the Front Matter as it is here, you can even add latex:
 
 $$
 \begin{align*}
@@ -164,6 +164,17 @@ $$
     \end{array} \right)
 \end{align*}
 $$
+
+You can also treat a section of text as a block, and use kramdown's block attribution methods to change fonts.
+You can see at the end of this section in the markdown that I do just that
+{: class="cabin"}
+
+<div markdown="1" class="content-block grey justify">
+# This is a really long heading block so I can see if justify breaks the heading, and make sure that headings don't get justify unless they are explicitly classed with justify like the following heading
+
+# This is the following really long heading block so I can see if justify breaks the heading, and make sure that only this heading is justified because it has the explicit tag
+{: class="justify"}
+</div>
 
 <div markdown="1" class="content-block grey justify">
 # Citation
