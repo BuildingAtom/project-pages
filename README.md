@@ -1,12 +1,12 @@
 # Getting Started
 
-This project is designed to be boht configurable and lightweight.
-Most likely if you're using this as a project specific page, you only need the index.markdown file.
+This project is designed to be both configurable and lightweight.
+Most likely if you're using this as a project specific page, you only need one markdown file to describe the whole page.
 
 **Do NOT fork this repo to use the template!**
-This repo holds the remote-theme for GitHub Pages and as a result, forking it means you are actually downloading more than you need.
+This repo holds the remote-theme for GitHub Pages in an orphan branch and as a result, forking it means you are actually downloading much more than you need (even if the theme isn't that big).
 Besides, it makes it more difficult to get running as a project page anyway!
-All you should do is download the archive for one of the example branches (where you're reading this from right now!) and upload these.
+All you should do is download the archive for one of the example branches (where you're reading this from right now!) and upload these files.
 These examples are close to the minimal files needed.
 
 ## Create an orphan branch and ensure that it is clean
@@ -22,12 +22,12 @@ git status
 # And make sure to delete them
 ```
 
+Alternately, you can create a new folder and initialize it as a new git repo.
+In this scenario, you can set the same remote repository as the upstream repo, and just make sure to commit the website files to a dedicated branch separate from the others.
+
 ## Extract these files to your desired location
 
 From within your repository, execute the following commands.
-We use `rsync` here because it's able to copy the hidden files that globbing with `mv` or`cp` run the risk of ignoring.
-Windows users shouldn't have a problem with using Windows Explorer as that doesn't hide `.` prefixed files.
-Just download the zip from the top if you're a Windows user and extract it to your desired repository location.
 
 ```bash
 wget "https://github.com/BuildingAtom/project-pages/archive/refs/heads/main-v1-examples.zip" -O /tmp/project-pages-starter.zip
@@ -36,6 +36,10 @@ rsync -a /tmp/project-pages-main-v1-examples/ ./
 # Verify that you have .gitignore and .github copied
 ls -la
 ```
+
+I suggest `rsync` here because it's able to copy the hidden files that globbing with `mv` or `cp` run the risk of ignoring.
+Windows users shouldn't have a problem with using Windows Explorer as that doesn't hide `.` prefixed files.
+Just download the zip from the top if you're a Windows user and extract it to your desired repository location.
 
 ## Delete extra examples
 
@@ -49,7 +53,7 @@ rm armour-dev.markdown sel_map.markdown
 At this point, it's reasonable to make an initial commit on the orphan branch, so go ahead and do that.
 A workflow is included in these files already, so this should trigger a github action, but it will likely fail to deploy.
 Verify that your Pages section in Settings is set correctly as [per this tutorial](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
-Note that you shouldn't need to create a new workflow.
+*Note that you shouldn't need to create a new workflow.*
 After that, verify that you have enabled deploy permissions for the `gh-pages` branch, or whichever name you used, to the `github-pages` environment under the Environments tab in Settings.
 
 ```bash
@@ -87,8 +91,8 @@ The rest of the file is fairly self-explainable.
 * `css/stylesheet.scss`: This holds variable definitions for a lot of the parameters that are used throughout the scss files.
 Each of these should be self-explanatory, but change these to change the appearance of the site.
 
-**Note**: In addition to `css/stylesheet.scss`, you can make your own `css/overrides.css` file.
-If it exists, this file is imported after `css/stylesheeet.scss`.
+**Note**: In addition to `css/stylesheet.scss`, you can make your own `css/overrides.css` or `css/overrides.scss` file.
+If it exists, this file is imported after `css/stylesheeet.scss` and can be used to override some of the style I have written.
 
 ---
 
