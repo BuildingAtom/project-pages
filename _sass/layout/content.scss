@@ -15,15 +15,15 @@ $content-title-line-height: 1.2;
 }
 
 .authors{
-  padding: calc($spacing-unit/2) 0;
+  padding: #{$spacing-unit/2} 0;
   .box {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: baseline;
-    column-gap: calc($spacing-unit/2);
-    row-gap: calc($spacing-unit/3);
-    margin-bottom: calc($spacing-unit/2);
+    column-gap: #{$spacing-unit/2};
+    row-gap: #{$spacing-unit/3};
+    margin-bottom: #{$spacing-unit/2};
     font-size: $authors-base-font-size;
     line-height: $base-line-height*0.8;
 
@@ -62,15 +62,15 @@ $content-title-line-height: 1.2;
 
 
 .external-links{
-  padding: calc($spacing-unit/4) 0;
+  padding: #{$spacing-unit/4} 0;
   .box {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: baseline;
-    column-gap: calc($spacing-unit/2);
-    row-gap: calc($spacing-unit/3);
-    margin-bottom: calc($spacing-unit/2);
+    column-gap: #{$spacing-unit/2};
+    row-gap: #{$spacing-unit/3};
+    margin-bottom: #{$spacing-unit/2};
 
     .single {
       position: relative;
@@ -136,12 +136,12 @@ $content-title-line-height: 1.2;
   }
 
   .content-block {
-    margin: $spacing-unit calc(0rem - $spacing-unit);
-    padding: calc($spacing-unit/2) $spacing-unit;
+    margin: $spacing-unit #{-$spacing-unit};
+    padding: #{$spacing-unit/2} $spacing-unit;
   }
 
   .no-pre {
-    margin-top: calc(0rem - $spacing-unit/2);
+    margin-top: #{-$spacing-unit/2};
     * {
       margin-top: revert;
     }
@@ -156,16 +156,16 @@ $content-title-line-height: 1.2;
   }
 
   .fullwidth {
-    margin: 0 calc(0rem - $spacing-unit);
+    margin: 0 #{-$spacing-unit};
   }
 
   hr {
-    margin-left: calc(0rem - $spacing-unit);
-    margin-right: calc(0rem - $spacing-unit);
+    margin-left: #{-$spacing-unit};
+    margin-right: #{-$spacing-unit};
   }
 
   img {
     margin: $spacing-unit;
-    max-width: calc(100% - 2*$spacing-unit);
+    max-width: calc(100% - #{2*$spacing-unit});
   }
 }
