@@ -7,11 +7,11 @@ description: >- # Supports markdown
 show-description: true
 
 # Preview image for social media cards
-image:
-  path: /assets/img/twitter.png
-  height: 100
-  width: 100
-  alt: Twitter Logo
+# image:
+#   path: /assets/img/twitter.png
+#   height: 100
+#   width: 100
+#   alt: Twitter Logo
 
 # Only the first author is supported by twitter metadata
 authors:

@@ -8,6 +8,13 @@ baseurl: "/project-pages" # the subpath of your site, e.g. /blog
 url: "https://buildingatom.io" # the base hostname & protocol for your site, e.g. http://example.com
 title-format: page-site # options are page-site, page, site
 
+# Important for initial setup
+plugins:
+  - jekyll-seo-tag        # Easy SEO
+  - jekyll-remote-theme   # So we can use the theme
+  - jekyll-default-layout # So we can use the theme easily
+remote_theme: BuildingAtom/project-pages@v1
+
 # Hide the credits in the footer by setting this false.
 show-credit: true
 
