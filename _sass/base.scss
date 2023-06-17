@@ -16,6 +16,12 @@ html {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
+  @include media-query(mobile) {
+    font-size: $base-font-size*$mobile-font-scale;
+  }
+  @include media-query(tablet) {
+    font-size: $base-font-size*$tablet-font-scale;
+  }
 }
 
 body {
@@ -26,7 +32,7 @@ body {
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: $title-font-family;
+  font-family: $heading-font-family;
 }
 
 /* Add each additional font */
@@ -41,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
+ul, ol, dl, figure, hr,
 %vertical-rhythm {
   margin-bottom: calc($spacing-unit / 2);
 }
@@ -211,12 +217,12 @@ table {
   padding-left: $spacing-unit;
   @extend %clearfix;
 
-  @include media-query(tablet) {
-    max-width: -webkit-calc(#{$full-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$full-width} - (#{$spacing-unit}));
-    padding-right: calc($spacing-unit / 2);
-    padding-left: calc($spacing-unit / 2);
-  }
+  // @include media-query(tablet) {
+  //   max-width: -webkit-calc(#{$full-width} - (#{$spacing-unit}));
+  //   max-width:         calc(#{$full-width} - (#{$spacing-unit}));
+  //   padding-right: calc($spacing-unit / 2);
+  //   padding-left: calc($spacing-unit / 2);
+  // }
 }
 
 

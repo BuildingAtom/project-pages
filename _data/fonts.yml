@@ -7,6 +7,7 @@ google-fonts-href:
 # Specify your fonts for your site.
 # If a section's font isn't specified, it will use the base font
 # You can specify title-font, subtitle-font, heading-font.
+# subtitle-font is used for the description
 # Body font will always be the base-font.
 base-font: >
   "Noto Sans"
@@ -15,8 +16,10 @@ title-font: >
   "Cabin"
 
 subtitle-font: >
-  "Cabin"
+  "Noto Sans"
 
+heading-font: >
+  "Noto Sans"
 
 # Additional font classes for inline usage can be specified below
 fonts:

@@ -29,7 +29,7 @@ $content-title-line-height: 1.2;
 
     .single {
       text-align: center;
-      flex: 0 0 7em;
+      flex: 0 0 8em;
       white-space: nowrap;
 
       .name {
@@ -112,6 +112,7 @@ $content-title-line-height: 1.2;
 /* Posts */
 .content {
   margin-bottom: $spacing-unit;
+  flex: 1;
 
   h1 {
     font-size: 2.2em;
@@ -139,6 +140,13 @@ $content-title-line-height: 1.2;
     padding: calc($spacing-unit/2) $spacing-unit;
   }
 
+  .no-pre {
+    margin-top: calc(0rem - $spacing-unit/2);
+    * {
+      margin-top: revert;
+    }
+  }
+
   .gray, .grey {
     background-color: $grey-color-light;
   }
@@ -149,6 +157,11 @@ $content-title-line-height: 1.2;
 
   .fullwidth {
     margin: 0 calc(0rem - $spacing-unit);
+  }
+
+  hr {
+    margin-left: calc(0rem - $spacing-unit);
+    margin-right: calc(0rem - $spacing-unit);
   }
 
   img {

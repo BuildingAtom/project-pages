@@ -2,17 +2,20 @@
 
 // full width of overall site
 $full-width:        1000px !default;
-// content width when side pane active
-$content-width:     700px !default;
+$mobile-width:      500px  !default;
 
 $core-font-family: Roboto, Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $base-font-family: $data-base-font, $core-font-family !default;
 $title-font-family: $data-title-font, $data-base-font !default;
+$subtitle-font-family: $data-subtitle-font, $data-base-font !default;
+$heading-font-family: $data-heading-font, $data-base-font !default;
 $base-font-size:    16px !default;
+$tablet-font-scale: 0.88 !default;
+$mobile-font-scale: 0.75 !default;
 $title-font-scale:  3.33 !default;
-$description-font-size:  1.66rem !default;
+$description-font-size:  1.66em !default;
 $description-max-width:  $full-width !default;
-$authors-base-font-size: 1.25rem !default;
+$authors-base-font-size: 1.25em !default;
 $base-font-weight:  400 !default;
 $small-font-size:   0.8rem !default;
 $base-line-height:  1.75 !default;

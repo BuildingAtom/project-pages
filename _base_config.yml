@@ -8,6 +8,14 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
 use-page-title: false
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "base"
+      show-description: true
+
 # Easy SEO
 plugins:
   - jekyll-seo-tag
@@ -15,26 +23,20 @@ plugins:
 # Predefine footer tags
 # Icons here are taken from simpleicons
 footer:
-  connections-pre: Lab Socials
-  connections-post: Lab Socials
-  connections:
-    twitter: https://www.twitter.com/BuildingAtom
-    github:  https://github.com/BuildingAtom
   related-sites:
-    prefix-text:
     sites:
-      - text: Demo site
-        href: https://buildingatom.io/
-        icon: gg-website
-        icon-library: css.gg
+      - text: Project Pages Demo
+        href: https://buildingatom.io/project-pages/
+        icon: icloud # Just using this for now
+        icon-library: simpleicons
 
 # Add credits to the bottom of the page
 show-credit: true
 credit:
-  copyright-symbol: true
+  copyright-symbol: false
   text: >- # supports markdown
     [Project pages template](https://www.github.com/BuildingAtom/project-pages)
-    by Adam Li / [@BuildingAtom](https://www.github.com/BuildingAtom)
+    built by Adam Li / [@BuildingAtom](https://www.github.com/BuildingAtom)
 
 # Code highlighter
 highlighter: rouge

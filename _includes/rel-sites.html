@@ -1,9 +1,6 @@
 {%- assign rel = include.sites -%}
 {%- if rel and rel.sites.size > 0 -%}
   <div class="related">
-    {%- if rel.prefix-text -%}
-      <p class="related-pre">{{ rel.prefix-text | escape }}</p>
-    {%- endif -%}
     <ul class="related-sites">
     {%- for loc in rel.sites -%}
       <li>

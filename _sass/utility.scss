@@ -4,9 +4,9 @@
 // Media Queries
 //from answer by Kyzer at https://stackoverflow.com/a/49421832
 $media_queries : (
-    'mobile'    : unquote("only screen and (max-width: 500px)"),
-    'tablet'    : unquote("only screen and (min-width: 501px) and (max-width: ($content-width + $full-width)/2)"),
-    'desktop'   : unquote("only screen and (min-width: ($content-width + $full-width)/2+1)")
+    'mobile'    : unquote("only screen and (max-width: #{$mobile-width})"),
+    'tablet'    : unquote("only screen and (min-width: #{$mobile-width+1}) and (max-width: #{$full-width})"),
+    'desktop'   : unquote("only screen and (min-width: #{$full-width+1})")
 );
 @mixin media-query($breakpoints) {
     $conditions : ();

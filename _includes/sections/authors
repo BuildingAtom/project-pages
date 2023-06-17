@@ -13,7 +13,7 @@
         {%- endif -%}
       </p>
       {%- if author.mailto OR author.mailto != blank %}
-        <a class="email" href="mailto:{{ author.mailto }}">{{ author.email }}</a>
+        <a class="email" href="mailto:{{ author.mailto }}">{{ author.email | default: author.mailto}}</a>
       {%- elsif author.email OR author.email != blank %}
         <p class="email">{{ author.email }}</p>
       {%- endif %}

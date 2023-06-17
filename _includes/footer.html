@@ -1,3 +1,4 @@
+{%- if site.footer OR site.footer != blank OR site.show-credit -%}
 <footer class="site-footer">
   <div class="wrapper">
     {%- if site.show-credit -%}
@@ -10,4 +11,5 @@
     
   </div>
 </footer>
+{%- endif %}
 {% include footer-icon-libraries.html %}

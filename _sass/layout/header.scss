@@ -10,9 +10,10 @@
   text-align: center;
 
   .page-title {
-    font-size: $base-font-size*$title-font-scale;
+    font-family: $title-font-family;
+    font-size: #{$title-font-scale}em;
     font-weight: 900;
-    line-height: $base-line-height*0.75;
+    line-height: $base-line-height*0.66;
     letter-spacing: -1px;
     margin-bottom: 0;
     text-decoration: none;
@@ -26,6 +27,7 @@
   }
 
   .page-description {
+    font-family: $subtitle-font-family;
     margin: calc($spacing-unit/2) auto;
     font-size: $description-font-size;
     line-height: $base-line-height*0.8;

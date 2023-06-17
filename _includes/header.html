@@ -1,6 +1,6 @@
 <header class="page-header" role="banner">
   <div class="wrapper">
-    <a class="page-title" rel="bookmark" href="{{ "/" | absolute_url }}">{{ page.title | escape }}</a>
+    <a class="page-title" rel="bookmark" href="{{ page.url | absolute_url }}">{{ page.title | escape }}</a>
     {%- if page.show-description %}
       <div class="page-description">{{ page.description | markdownify }}</p>
     {%- endif %}
