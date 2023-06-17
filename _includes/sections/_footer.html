@@ -5,11 +5,11 @@
       <p class="credit-text">{%- if site.credit.copyright-symbol -%}<span class="large-symbol">&copy;</span> {%- endif -%}{{ site.credit.text | markdownify | remove: "<p>" | remove: "</p>" }}
     {%- endif -%}
     
-    {%- include connections.html -%}
+    {%- include sections/footer/_connections.html -%}
     
-    {%- include rel-sites.html sites=site.footer.related-sites -%}
+    {%- include sections/footer/_rel-sites.html sites=site.footer.related-sites -%}
     
   </div>
 </footer>
 {%- endif %}
-{% include footer-icon-libraries.html %}
+{% include util/_footer-icon-libraries.html %}

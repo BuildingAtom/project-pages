@@ -15,15 +15,15 @@ $content-title-line-height: 1.2;
 }
 
 .authors{
-  padding: #{$spacing-unit/2} 0;
+  padding: #{calc($spacing-unit/2)} 0;
   .box {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: baseline;
-    column-gap: #{$spacing-unit/2};
-    row-gap: #{$spacing-unit/3};
-    margin-bottom: #{$spacing-unit/2};
+    column-gap: #{calc($spacing-unit/2)};
+    row-gap: #{calc($spacing-unit/3)};
+    margin-bottom: #{calc($spacing-unit/2)};
     font-size: $authors-base-font-size;
     line-height: $base-line-height*0.8;
 
@@ -62,15 +62,15 @@ $content-title-line-height: 1.2;
 
 
 .external-links{
-  padding: #{$spacing-unit/4} 0;
+  padding: #{calc($spacing-unit/4)} 0;
   .box {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: baseline;
-    column-gap: #{$spacing-unit/2};
-    row-gap: #{$spacing-unit/3};
-    margin-bottom: #{$spacing-unit/2};
+    column-gap: #{calc($spacing-unit/2)};
+    row-gap: #{calc($spacing-unit/3)};
+    margin-bottom: #{calc($spacing-unit/2)};
 
     .single {
       position: relative;
@@ -137,11 +137,11 @@ $content-title-line-height: 1.2;
 
   .content-block {
     margin: $spacing-unit #{-$spacing-unit};
-    padding: #{$spacing-unit/2} $spacing-unit;
+    padding: #{calc($spacing-unit/2)} $spacing-unit;
   }
 
   .no-pre {
-    margin-top: #{-$spacing-unit/2};
+    margin-top: #{- calc($spacing-unit/2)};
     * {
       margin-top: revert;
     }

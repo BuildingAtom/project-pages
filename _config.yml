@@ -8,14 +8,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
 use-page-title: false
 
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-    values:
-      layout: "project-pages"
-      show-description: true
-
 # Easy SEO
 plugins:
   - jekyll-seo-tag
@@ -49,6 +41,9 @@ icon-libraries:
   - ionicons
   - feathericons
   - academicons
+
+# If you want to use latex, add mathjax
+mathjax: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.

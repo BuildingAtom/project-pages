@@ -3,14 +3,14 @@
 ---
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang }}">
-  {%- include head.html -%}
+  {%- include _head.html -%}
   <body>
-    {%- include header.html -%}
+    {%- include sections/_header.html -%}
     <main class="content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
-    {%- include footer.html -%}
+    {%- include sections/_footer.html -%}
   </body>
 </html>

@@ -53,3 +53,13 @@ $table-text-align:  left !default;
   "layout/footer",
   "minima/syntax-highlighting"
 ;
+
+/* Add each additional font */
+@each $class, $font in $data-fonts{
+  .#{$class} {
+    font-family: $font, $base-font-family;
+    &>* {
+      font-family: $font, $base-font-family;
+    }
+  }
+}
