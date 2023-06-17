@@ -5,11 +5,11 @@
     {%- for loc in rel.sites -%}
       <li>
         <a href="{{ loc.href }}">
-          {%- if loc.icon OR loc.icon != blank -%}
+          {%- if loc.icon or loc.icon != blank -%}
             {%- include util/icons icon=loc.icon icon-library=loc.icon-library -%}
             <span style="opacity: 0;">&nbsp;</span>
           {%- endif -%}
-          {%- if loc.text OR loc.text != blank -%}
+          {%- if loc.text or loc.text != blank -%}
             {{ loc.text | escape }}
           {%- endif -%}
         </a>

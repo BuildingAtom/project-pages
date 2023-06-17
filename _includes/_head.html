@@ -11,6 +11,8 @@
   {%- when "site" %}
     {%- seo title=false %}
     <title>{{ site.title | escape }}</title>
+  {% else %}
+  {%- seo %}
   {%- endcase %}
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
   {%- include util/_header-icon-libraries.html -%}
@@ -21,7 +23,7 @@
       <link rel="stylesheet" href="{{ "/css/overrides.css" | relative_url }}">
     {% endif %}
   {% endfor %}
-  {%- if site.mathjax -%}
+  {%- if site.mathjax or page.mathjax -%}
   <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   {%- endif %}
 </head>
