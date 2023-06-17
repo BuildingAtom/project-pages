@@ -10,10 +10,10 @@ mathjax: true
 
 # Preview image for social media cards
 image:
-  path: /assets/img/twitter.png
+  path: https://cdn.pixabay.com/photo/2019/09/05/01/11/mountainous-landscape-4452844_1280.jpg
   height: 100
-  width: 100
-  alt: Twitter Logo
+  width: 256
+  alt: Random Landscape
 
 # Only the first author is supported by twitter metadata
 authors:

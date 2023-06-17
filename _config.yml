@@ -1,19 +1,23 @@
 # User configuration file
-# Values in this file will override values from the base_config.yml
+# Important for initial setup
+# The first three are needed for the project-pages theme.
+plugins:
+  - jekyll-seo-tag        # Easy SEO
+  - jekyll-remote-theme   # So we can use the theme
+  - jekyll-default-layout # So we can use the theme easily
+  # If you have additional plugins, you can add them here.
+  # Make sure GitHub supports them here: https://pages.github.com/versions/
+
+# Don't change! (or do change if you really want ig)
+remote_theme: BuildingAtom/project-pages@v1
 
 # Metadata and SEO-helper stuff
 # This title here should correspond to your base site or as a shared title
 title: Project Pages Template
 baseurl: "/project-pages" # the subpath of your site, e.g. /blog
 url: "https://buildingatom.io" # the base hostname & protocol for your site, e.g. http://example.com
-title-format: page-site # options are page-site, page, site
-
-# Important for initial setup
-plugins:
-  - jekyll-seo-tag        # Easy SEO
-  - jekyll-remote-theme   # So we can use the theme
-  - jekyll-default-layout # So we can use the theme easily
-remote_theme: BuildingAtom/project-pages@v1
+# This sets window title, not the title you read on the page
+title-format: page-site # options are page-site, page, site.
 
 # Hide the credits in the footer by setting this false.
 show-credit: true
@@ -38,15 +42,17 @@ footer:
 
 # Only leave the icon libraries you want to use enabled.
 # The supported libraries are:
-# bootstrap-icons, css.gg, ionicons, feathericons, academicons
 #
-# simpleicons is also supported, but doesn't need to be listed as
-# it doesn't require any extra loading.
-# Default is to load all of the above.
+# simpleicons (no need to enable), bootstrap-icons, css.gg,
+# ionicons, feathericons, academicons
+#
+# simpleicons doesn't require any extra loading.
+# If you don't define this, the default is to load all of the above.
 icon-libraries:
   - bootstrap-icons
 
-# Keep mathjax disabled because it's a bit expensive.
+# Keep mathjax disabled because it's a bit expensive. (Disabled by default)
+# You can enable this on a page-by-page basis, if you somehow are using mutliple pages.
 mathjax: false
 
 # There is room for extra SEO shenanigans. jekyll-seo-tag is included,

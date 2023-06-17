@@ -2,7 +2,10 @@
 # Import main from _sass
 ---
 
+///////////////////////////////////////
 // load fonts data here
+// Change these values through _data/fonts.yml instead of here!
+///////////////////////////////////////
 $data-base-font: {{ site.data.fonts.base-font | strip }};
 $data-title-font: {{ site.data.fonts.title-font | strip }};
 $data-subtitle-font: {{ site.data.fonts.subtitle-font | strip }};
