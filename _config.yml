@@ -13,7 +13,7 @@ defaults:
     scope:
       path: "" # an empty string here means all files in the project
     values:
-      layout: "base"
+      layout: "project-pages"
       show-description: true
 
 # Easy SEO

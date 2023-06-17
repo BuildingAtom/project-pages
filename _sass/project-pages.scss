@@ -8,7 +8,7 @@ $core-font-family: Roboto, Helvetica, -apple-system, BlinkMacSystemFont, "Segoe 
 $base-font-family: $data-base-font, $core-font-family !default;
 $title-font-family: $data-title-font, $data-base-font !default;
 $subtitle-font-family: $data-subtitle-font, $data-base-font !default;
-$heading-font-family: $data-heading-font, $data-base-font !default;
+$heading-font-family: $data-title-font, $data-base-font !default;
 $base-font-size:    16px !default;
 $tablet-font-scale: 0.88 !default;
 $mobile-font-scale: 0.75 !default;

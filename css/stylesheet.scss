@@ -45,4 +45,4 @@ $data-fonts: ({%- for font in site.data.fonts.fonts -%}{{ font.class }}: {{- fon
 
 // $table-text-align:  left;
 
-@import "main";
+@import "project-pages";
