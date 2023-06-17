@@ -1,0 +1,20 @@
+{%- if site.footer.connections AND site.footer.connections != blank -%}
+{%- assign connections = site.footer.connections -%}
+{%- assign connections-pre = site.footer.connections-pre -%}
+{%- assign connections-post = site.footer.connections-post -%}
+  <div class="connections">
+    {%- if connections-pre -%}
+      <p class="connection-pre">{{ connections-pre }}</p>
+    {%- endif -%}
+    
+    <ul class="connections-list">
+      {%- for connection in connections -%}
+        <li><a href="{{ connection[1] | uri_escape }}"><img class= "connection-icon" height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/{{ connection[0] | escape }}.svg" /></a></li>
+      {%- endfor -%}
+    </ul>
+    
+    {%- if connections-post -%}
+      <p class="connection-post">{{ connections-post }}</p>
+    {%- endif -%}
+  </div>
+{%- endif -%}

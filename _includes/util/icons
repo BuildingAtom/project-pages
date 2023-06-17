@@ -1,0 +1,14 @@
+{%- case include.icon-library -%}
+{%- when "simpleicons" -%}
+<i class="si-wrapper" style="background-image: url(https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/{{ include.icon | escape }}.svg)"></i>
+{%- when "bootstrap-icons" -%}
+<i class="bi {{include.icon}}"></i>
+{%- when "css.gg" -%}
+<i class="gg-wrapper {{include.icon}}"></i>
+{%- when "ionicons" -%}
+<ion-icon name="{{include.icon}}"></ion-icon>
+{%- when "feathericons" -%}
+<i data-feather="{{include.icon}}"></i>
+{%- when "academicons" -%}
+<i class="ai {{include.icon}}"></i>
+{%- endcase -%}

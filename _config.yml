@@ -1,0 +1,10 @@
+# User configuration file
+# Values in this file will override values from the base_config.yml
+
+# Metadata and SEO-helper stuff
+# This title here should correspond to your base site or as a shared title
+title: Project Pages Template
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+title-format: page-site # options are page-site, page, site

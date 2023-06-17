@@ -1,0 +1,10 @@
+---
+# Import main from _sass
+---
+
+// load fonts data here
+$data-base-font: {{ site.data.fonts.base-font | strip }};
+$data-title-font: {{ site.data.fonts.title-font | strip }};
+$data-fonts: ({%- for font in site.data.fonts.fonts -%}{{ font.class }}: {{- font.font | strip -}}{%- unless forloop.last -%}, {%- endunless -%}{%- endfor -%});
+
+@import "main";

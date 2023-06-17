@@ -1,0 +1,102 @@
+// Footer partial
+
+
+/**
+ * Footer Section
+ */
+
+// Break these out to variables to simplify modification
+$footer-vertical-rhythm: calc($spacing-unit/3);
+
+// Style code
+.site-footer {
+  // isolate the footer
+  font-size: $small-font-size;
+  border-top: 1px solid $grey-color-light;
+  padding: calc($spacing-unit/2) 0;
+  
+  p {
+    @include center-block;
+    color: $grey-color;
+    text-align: center;
+    margin-bottom: $footer-vertical-rhythm;
+  }
+  
+  /* Description Text */
+  .description {
+    font-size: .95em;
+    font-size: .95em;
+    width: -webkit-calc(80% - (#{$spacing-unit} / 2));
+    width:         calc(80% - (#{$spacing-unit} / 2));
+  }
+  
+  .credit-text {
+    /* small fudge factor to account for change in line heights */
+    margin-top: calc($footer-vertical-rhythm/4);
+    .large-symbol {
+      font-size: 1.15em;
+      padding-right: .25em;
+    }
+    a {
+      color: $grey-color;
+      text-decoration-color: fade-out($grey-color, .6);
+      &:hover {
+        text-decoration-color: darken(fade-out($grey-color, .2), 8%);
+      }
+    }
+  }
+  
+  /* Connections list */
+  .connections {
+    @include center-block;
+    margin-bottom: $footer-vertical-rhythm;
+    .connections-list {
+      @include inline-list(5px);
+      li .connection-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        display: inline-block;
+        vertical-align: middle;
+        filter: $social-icon-filter;
+      }
+      a &:hover {
+        text-decoration: none;
+      }
+    }
+    p {
+      display: inline-block;
+      margin-bottom: 0;
+      &.connection-pre {
+        padding-right: .5em;
+      }
+      &.connection-post {
+        padding-left: .5em;
+      }
+    }
+  }
+  
+  /* Related sites */
+  .related {
+    @include center-block;
+    margin-bottom: $footer-vertical-rhythm;
+    .related-sites {
+      @include inline-list(5px);
+      a {
+        color: $grey-color;
+        text-decoration-color: fade-out($grey-color, .6);
+        &:hover {
+          text-decoration-color: darken(fade-out($grey-color, .2), 8%);
+        }
+      }
+    }
+    p {
+      display: inline-block;
+      &.related-pre {
+        padding-right: .5em;
+      }
+      &.related-post {
+        padding-left: .5em;
+      }
+    }
+  }
+}

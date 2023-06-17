@@ -1,0 +1,19 @@
+.si-wrapper{
+  background-repeat: no-repeat;
+  background-position: center;
+  &:before {
+    content: " ";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+}
+
+ion-icon{
+  margin-bottom: -0.15em;
+}
+
+.gg-wrapper{
+    display: inline-block;
+    vertical-align: middle;
+}

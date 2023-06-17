@@ -1,0 +1,33 @@
+<div class="authors" aria-label="Authors">
+  <div class="box">
+  {%- for author in page.authors %}
+    <div class="single">
+      <p class="name">
+        {%- if author.url OR author.url != blank -%}
+        <a href="{{ author.url }}">{{ author.name }}</a>
+        {%- else -%}
+        {{ author.name }}
+        {%- endif -%}
+        {%- if author.footnotes -%}
+        <sup>{{ author.footnotes }}</sup>
+        {%- endif -%}
+      </p>
+      {%- if author.mailto OR author.mailto != blank %}
+        <a class="email" href="mailto:{{ author.mailto }}">{{ author.email }}</a>
+      {%- elsif author.email OR author.email != blank %}
+        <p class="email">{{ author.email }}</p>
+      {%- endif %}
+    </div>
+  {%- endfor %}
+  </div>
+  <div class="footnote">
+  {% if page.author-footnotes.first %}
+    {%- for footnote in page.author-footnotes %}
+    <p><sup>{{ footnote[0] }}</sup>{{- footnote[1] | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" -}}</p>
+    {%- unless forloop.last -%},&nbsp;{%- endunless -%}
+    {%- endfor %}
+  {% else %}
+    {{ page.author-footnotes | markdownify }}
+  {% endif %}
+  </div>
+</div>

@@ -1,0 +1,46 @@
+// Utility mixins
+
+
+// Media Queries
+//from answer by Kyzer at https://stackoverflow.com/a/49421832
+$media_queries : (
+    'mobile'    : unquote("only screen and (max-width: 500px)"),
+    'tablet'    : unquote("only screen and (min-width: 501px) and (max-width: ($content-width + $full-width)/2)"),
+    'desktop'   : unquote("only screen and (min-width: ($content-width + $full-width)/2+1)")
+);
+@mixin media-query($breakpoints) {
+    $conditions : ();
+    @each $breakpoint in $breakpoints {
+        // If the key exists in the map
+        $conditions: append(
+            $conditions,
+            #{inspect(map-get($media_queries, $breakpoint))},
+            comma
+        );
+    }
+    @media #{$conditions} {
+        @content;
+    }
+}
+
+
+// use in ul or ol (untested) to make inline list
+@mixin inline-list($interpadding) {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    padding-right: $interpadding;
+  }
+  > :last-child {
+    padding-right: 0;
+  }
+}
+// makes the element into a block and centers it
+@mixin center-block {
+  display: block;
+  width: max-content;
+  margin: auto;
+  max-width: inherit;
+}

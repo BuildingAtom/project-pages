@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+// full width of overall site
+$full-width:        1000px !default;
+// content width when side pane active
+$content-width:     700px !default;
+
+$core-font-family: Roboto, Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-family: $data-base-font, $core-font-family !default;
+$title-font-family: $data-title-font, $data-base-font !default;
+$base-font-size:    16px !default;
+$title-font-scale:  3.33 !default;
+$description-font-size:  1.66rem !default;
+$description-max-width:  $full-width !default;
+$authors-base-font-size: 1.25rem !default;
+$base-font-weight:  400 !default;
+$small-font-size:   0.8rem !default;
+$base-line-height:  1.75 !default;
+
+$spacing-unit:      1.8rem !default;
+
+//add themeing later
+$text-color:        #111 !default;
+$heading-color:     #000000AA !default;
+$heading-weight:    300 !default;
+$background-color:  #fff !default;
+$link-color:		#3B7CC1 !default;
+
+$grey-color:        #828282 !default;
+$grey-color-light:  lighten($grey-color, 40%) !default;
+$grey-color-dark:   darken($grey-color, 25%) !default;
+
+// https://codepen.io/sosuke/pen/Pjoqqp if you want to change the color
+// #707070 here
+$social-icon-filter: invert(43%) sepia(3%) saturate(20%) hue-rotate(330deg) brightness(99%) contrast(87%) !default;
+
+$table-text-align:  left !default;
+
+
+// Import utilities
+@import "utility";
+// Extra css to make icons more visually compatible with each other
+@import "icon-compat";
+  
+// Import partials.
+@import
+  "base",
+  "layout/header",
+  "layout/content",
+  "layout/footer",
+  "minima/syntax-highlighting"
+;

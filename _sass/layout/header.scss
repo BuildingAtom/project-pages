@@ -1,0 +1,39 @@
+// leaving this broken for now
+
+/**
+ * Site header
+ */
+.page-header {
+  //border-top: 5px solid $grey-color-dark;
+  // border-bottom: 1px solid $grey-color-light;
+  margin-top: $spacing-unit*1.25;
+  text-align: center;
+
+  .page-title {
+    font-size: $base-font-size*$title-font-scale;
+    font-weight: 900;
+    line-height: $base-line-height*0.75;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: $text-color;
+    transition: none;
+
+    &,
+    &:visited {
+      color: $text-color;  
+    }
+  }
+
+  .page-description {
+    margin: calc($spacing-unit/2) auto;
+    font-size: $description-font-size;
+    line-height: $base-line-height*0.8;
+    letter-spacing: -1px;
+    max-width: $description-max-width;
+    p {
+      margin: 0;
+    }
+  }
+}
+

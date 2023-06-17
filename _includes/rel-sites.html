@@ -1,0 +1,23 @@
+{%- assign rel = include.sites -%}
+{%- if rel and rel.sites.size > 0 -%}
+  <div class="related">
+    {%- if rel.prefix-text -%}
+      <p class="related-pre">{{ rel.prefix-text | escape }}</p>
+    {%- endif -%}
+    <ul class="related-sites">
+    {%- for loc in rel.sites -%}
+      <li>
+        <a href="{{ loc.href }}">
+          {%- if loc.icon OR loc.icon != blank -%}
+            {%- include util/icons icon=loc.icon icon-library=loc.icon-library -%}
+            <span style="opacity: 0;">&nbsp;</span>
+          {%- endif -%}
+          {%- if loc.text OR loc.text != blank -%}
+            {{ loc.text | escape }}
+          {%- endif -%}
+        </a>
+      </li>
+    {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}

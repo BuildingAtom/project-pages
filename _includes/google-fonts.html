@@ -1,0 +1,5 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{%- for fonts in site.data.fonts.google-fonts-href -%}
+  <link href="{{ fonts | uri_escape }}" rel="stylesheet">
+{%- endfor -%}

@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    {%- if site.show-credit -%}
+      <p class="credit-text">{%- if site.credit.copyright-symbol -%}<span class="large-symbol">&copy;</span> {%- endif -%}{{ site.credit.text | markdownify | remove: "<p>" | remove: "</p>" }}
+    {%- endif -%}
+    
+    {%- include connections.html -%}
+    
+    {%- include rel-sites.html sites=site.footer.related-sites -%}
+    
+  </div>
+</footer>
+{% include footer-icon-libraries.html %}
