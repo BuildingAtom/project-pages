@@ -6,14 +6,14 @@
  */
 
 // Break these out to variables to simplify modification
-$footer-vertical-rhythm: #{calc($spacing-unit/3)};
+$footer-vertical-rhythm: #{$spacing-unit * 0.33};
 
 // Style code
 .site-footer {
   // isolate the footer
   font-size: $small-font-size;
   border-top: 1px solid $grey-color-light;
-  padding: #{calc($spacing-unit/2)} 0;
+  padding: #{$spacing-unit * 0.5} 0;
   
   p {
     @include center-block;

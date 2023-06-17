@@ -28,7 +28,7 @@
 
   .page-description {
     font-family: $subtitle-font-family;
-    margin: #{calc($spacing-unit/2)} auto;
+    margin: #{$spacing-unit * 0.5} auto;
     font-size: $description-font-size;
     line-height: $base-line-height*0.8;
     letter-spacing: -1px;
