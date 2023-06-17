@@ -1,17 +1,19 @@
 ---
 # Front matter. This is where you specify a lot of page variables.
+layout: default
 title:  "Example Page"
 date:   2023-06-16 03:03:01 -0400
 description: >- # Supports markdown
   This is the main project page and the page used to demonstrate how this works with all of the options for the Front Matter present
 show-description: true
+mathjax: true
 
 # Preview image for social media cards
-# image:
-#   path: /assets/img/twitter.png
-#   height: 100
-#   width: 100
-#   alt: Twitter Logo
+image:
+  path: /assets/img/twitter.png
+  height: 100
+  width: 100
+  alt: Twitter Logo
 
 # Only the first author is supported by twitter metadata
 authors:
@@ -112,6 +114,54 @@ Lorem ipsum dolor sit amet Consectetur adipiscing elit Integer molestie lorem at
 
 Lorem ipsum dolor sit amet Consectetur adipiscing elit Integer molestie lorem at massa.
 
+<div markdown="1" class="cabin">
+It's also possible to specify a new font for a specific section
+</div>
+
+<div markdown="1" class="jp">
+## See? 1
+</div>
+
+And you can also <span class="cabin">change it in the middle</span>, though that's a bit more problematic for other reasons.
+
+To specify fonts, just use Google Fonts and update `_data/fonts.yml`.
+Any fonts you add as extra fonts at the bottom become usable fonts in the body of the post.
+
+There are also tools to grab icons from other repos.
+Just use the following:
+{% include util/icons icon='github' icon-library='simpleicons' -%}
+, and you'll be able to add icons from any library you have enabled that is supported.
+
+This uses the liquid template engine for importing.
+If you include the - at the start of end of such a line, it say to discard all whitespace before or after.
+In order to keep the comma there, we added the -.
+This is what happens:
+{% include util/icons icon='github' icon-library='simpleicons' %}
+, when you don't have it (notice the space).
+
+And if you have mathjax enabled in `_config.yml` or in the Front Matter as it is here, you can even add latex:
+
+$$
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+$$
+
+
+You can also treat a section of text as a block, and use kramdown's block attribution methods to change fonts.
+You can see at the end of this section in the markdown that I do just that
+{: class="cabin"}
 
 <div markdown="1" class="content-block grey justify">
 # Citation

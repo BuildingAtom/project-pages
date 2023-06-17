@@ -46,5 +46,8 @@ footer:
 icon-libraries:
   - bootstrap-icons
 
+# Keep mathjax disabled because it's a bit expensive.
+mathjax: false
+
 # There is room for extra SEO shenanigans. jekyll-seo-tag is included,
 # so check out that repo to see what you can do.
