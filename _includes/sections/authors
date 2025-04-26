@@ -4,8 +4,15 @@
     <div class="single">
       <p class="name">
         {%- if author.url != blank and author.url -%}
-        <a href="{{ author.url }}">{{ author.name }}</a>
+        <a href="{{ author.url }}">
+          {%- if author.avatar != blank and author.avatar -%}
+          <img class="avatar" src="{{ author.avatar | absolute_url }}" alt="{{ author.name }}" /><br>
+          {%- endif -%}
+          {{ author.name }}</a>
         {%- else -%}
+        {%- if author.avatar != blank and author.avatar -%}
+        <img class="avatar" src="{{ author.avatar | absolute_url }}" alt="{{ author.name }}" /><br>
+        {%- endif -%}
         {{ author.name }}
         {%- endif -%}
         {%- if author.footnotes -%}
@@ -16,6 +23,8 @@
         <a class="email" href="mailto:{{ author.mailto }}">{{ author.email | default: author.mailto}}</a>
       {%- elsif author.email != blank and author.email %}
         <p class="email">{{ author.email }}</p>
+      {% else %}
+        <p class="email">&nbsp;</p>
       {%- endif %}
     </div>
   {%- endfor %}

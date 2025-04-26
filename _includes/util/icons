@@ -11,4 +11,6 @@
 <i data-feather="{{include.icon}}"></i>
 {%- when "academicons" -%}
 <i class="ai {{include.icon}}"></i>
+{%- when "local" -%}
+<i class="local-icon-wrapper" style="background-image: url({{ include.icon | absolute_url | escape }})"></i>
 {%- endcase -%}

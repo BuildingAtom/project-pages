@@ -24,11 +24,13 @@ image:
 authors:
   - name: Someone
     footnotes: 1
+    avatar: https://upload.wikimedia.org/wikipedia/commons/9/9f/Old_wikipedia_logo.png
   - name: Adam Li
     url: https://buildingatom.io
     email: person [at] example.edu
     mailto: person@example.edu
     footnotes: 2
+    avatar: https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg
   - name: Person 3
     email: someemail@example.com
     footnotes: 3
@@ -54,6 +56,11 @@ links:
     icon-library: simpleicons
     text: Code
     url: https://github.com/BuildingAtom/project-pages
+  - icon: https://upload.wikimedia.org/wikipedia/commons/c/c8/Black_W_for_promotion.png
+    icon-library: local
+    text: Wikipedia
+    url: https://wikipedia.org/
+
 
 # End Front Matter
 ---
@@ -168,6 +175,71 @@ $$
 You can also treat a section of text as a block, and use kramdown's block attribution methods to change fonts.
 You can see at the end of this section in the markdown that I do just that
 {: class="cabin"}
+
+# Videos
+{% include util/video
+content="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+autoplay-in-frame=false
+autoplay-on-load=false
+preload="auto"
+hide_controls=false
+picture_in_picture=true
+muted=true
+loop=false
+playsinline=true
+pause_on_click=true
+poster="https://upload.wikimedia.org/wikipedia/commons/9/90/Elephants_Dream_s1_proog.jpg"
+width="90%"
+style="display:block; margin:auto;"
+%}
+
+# "Gridding"
+<div class="multicontent-container">
+<div class="multicontent-item">
+{% include util/video
+content="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+autoplay-in-frame=true
+muted=true
+poster="https://upload.wikimedia.org/wikipedia/commons/9/90/Elephants_Dream_s1_proog.jpg"
+ %}
+autoplayed when ~25% in view
+</div>
+<div class="multicontent-item">
+{% include util/video
+content="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+autoplay-on-load=true
+muted=true
+poster="https://upload.wikimedia.org/wikipedia/commons/9/90/Elephants_Dream_s1_proog.jpg"
+ %}
+autoplayed when video loaded
+</div>
+<div class="multicontent-item">
+{% include util/video
+content="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+poster="https://upload.wikimedia.org/wikipedia/commons/9/90/Elephants_Dream_s1_proog.jpg"
+ %}
+</div>
+</div>
+
+# "Gridding" Tighter
+<div class="multicontent-container tighter">
+<div class="multicontent-item" markdown="1">
+![Alt Text](https://cdn.pixabay.com/photo/2019/09/05/01/11/mountainous-landscape-4452844_1280.jpg "Random Image")
+Random text to talk about in this one grid box
+</div>
+<div class="multicontent-item" markdown="1">
+![Alt Text](https://cdn.pixabay.com/photo/2019/09/05/01/11/mountainous-landscape-4452844_1280.jpg "Random Image")
+</div>
+<div class="multicontent-item" markdown="1">
+![Alt Text](https://cdn.pixabay.com/photo/2019/09/05/01/11/mountainous-landscape-4452844_1280.jpg "Random Image")
+</div>
+<div class="multicontent-item" markdown="1">
+![Alt Text](https://cdn.pixabay.com/photo/2019/09/05/01/11/mountainous-landscape-4452844_1280.jpg "Random Image")
+</div>
+<div class="multicontent-item" markdown="1">
+![Alt Text](https://cdn.pixabay.com/photo/2019/09/05/01/11/mountainous-landscape-4452844_1280.jpg "Random Image")
+</div>
+</div>
 
 <div markdown="1" class="content-block grey justify">
 # This is a really long heading block so I can see if justify breaks the heading, and make sure that headings don't get justify unless they are explicitly classed with justify like the following heading

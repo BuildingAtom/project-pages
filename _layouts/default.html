@@ -17,4 +17,32 @@
     </main>
     {%- include sections/_footer.html -%}
   </body>
+  <!-- add autoplay in frame class -->
+  <script>
+    window.addEventListener("load", function() {
+      // Get all video elements and auto pause/play them depending on how in frame or not they are
+      let videos = document.querySelectorAll('.autoplay-in-frame');
+    
+      // Create an IntersectionObserver instance for each video
+      videos.forEach(video => {
+        const observer = new IntersectionObserver(entries => {
+          const isVisible = entries[0].isIntersecting;
+          if (isVisible && video.paused) {
+            video.play();
+          } else if (!isVisible && !video.paused) {
+            video.pause();
+          }
+        }, { threshold: 0.25 });
+    
+        observer.observe(video);
+      });
+    
+      // document.addEventListener("DOMContentLoaded", function() {
+      videos = document.querySelectorAll('.autoplay-on-load');
+    
+      videos.forEach(video => {
+        video.play();
+      });
+    });
+  </script>
 </html>

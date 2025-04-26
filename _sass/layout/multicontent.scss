@@ -1,0 +1,40 @@
+// mutlcontent container
+// Allows for 2/3 column auto layout - particularly good for showing off videos
+.multicontent-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  column-gap: 0.1rem;
+  row-gap: 0.2rem;
+  padding: 0;
+  margin: 0;
+  .multicontent-item {
+      min-width: 320px;
+      max-width: 100%;
+      flex-shrink: 2;
+      flex-basis: 30%;
+      flex-grow: 1;
+      @include media-query(mobile) {
+          min-width: 100%;
+      }
+      video {
+          width: 100%;
+          height: auto;
+          display: block;
+      }
+      img {
+          margin: 0;
+          max-width: 100%;
+      }
+  }
+  &.tighter .multicontent-item {
+      min-width: 120px;
+      flex-basis: 30%;
+      @include media-query(mobile) {
+          flex-basis: 120px;
+          flex-grow: 1;
+          flex-shrink: 1;
+          min-width: 0;
+      }
+  }
+}

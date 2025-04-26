@@ -17,3 +17,15 @@ ion-icon{
     display: inline-block;
     vertical-align: middle;
 }
+
+.local-icon-wrapper{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  &:before {
+    content: " ";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+}

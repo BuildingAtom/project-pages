@@ -1,0 +1,21 @@
+<video
+class="{{include.class | default: ''}}
+{%- if include.autoplay-in-frame %}autoplay-in-frame{% endif %}
+{%- if include.autoplay-on-load %}autoplay-on-load{% endif %}"
+preload="{{ include.preload | default: 'auto' }}"
+{% unless include.hide_controls %}controls{% endunless %}
+{% unless include.picture_in_picture %}disablepictureinpicture{% endunless %}
+{% if include.muted %}muted{% endif %}
+{% if include.loop %}loop{% endif %}
+{% if include.playsinline %}playsinline{% endif %}
+{% if include.hide_controls and include.pause_on_click %}
+onclick="this.paused ? this.play() : this.pause();"
+{% endif %}
+{% if include.poster %}
+poster="{{ include.poster | absolute_url }}"
+{% endif %}
+style="width: {{include.width | default: '100%'}};{{ include.style }}"
+>
+<source src="{{include.content | absolute_url}}" type="video/{{include.content | split: '.' | last}}">
+Your browser does not support this video.
+</video>
